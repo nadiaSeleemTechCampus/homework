@@ -1,0 +1,15 @@
+import UIKit
+
+
+func totalPriceOfRestaurantReceipt(items:[String:Float])->Float{
+    var total:Float=0.0
+    
+    for (_,price)in items{
+        total+=price
+    }
+    return total
+}
+
+
+var total=totalPriceOfRestaurantReceipt(items:["pasta":15.5,"salad":3.0,"water":1.5,"coffee":10.0])
+print(total)
