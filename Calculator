@@ -1,0 +1,40 @@
+import UIKit
+
+
+func calculate(numA:Float, numB:Float, operation:String)->Float{
+    
+    var result:Float=0.0
+    
+    switch(operation){
+    case "sum":
+        result=numA+numB
+        break
+        
+    case "subtract":
+         result=numA-numB
+        break
+        
+    case "multiply":
+        result=numA*numB
+        break
+        
+    case "divide":
+        result=numA/numB
+        break
+        
+    case "module":
+        result=numA.truncatingRemainder(dividingBy: numB)
+        break
+
+    default:
+        break
+    }
+    
+    return result
+    
+}
+
+
+var result=calculate(numA: 2, numB: 2, operation: "sum")
+print (result)
+
